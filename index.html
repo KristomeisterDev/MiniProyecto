@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calcular el Promedio</title>
+    <link rel="stylesheet" href="/CSS/styles.css">
+    
+</head>
+<body>
+    <header>
+        <h1>Boleta de Alumno</h1>
+    </header>
+    
+    <table id="campos">
+        <thead>
+            <th>
+                Descripción
+            </th>
+            <th>
+                Datos
+            </th>
+        </thead>
+        <tbody>
+            <tr>
+                <td class="celdaDescripcion">
+                    <p>1. Alumno: </p>                         
+                </td>
+                <td class="celdaDatos">
+                    <form action="">
+                        <div class="form" method="get" >
+                            <label for="alumno">Ingresa el Nombre del Alumno: </label>
+                            <input type="text" name="Nombre" id="nombre" placeholder="Aqui va el Nombre" required>
+                          </div>
+                    </form>
+                </td>
+            </tr>
+            <tr>
+                <td class="celdaDescripcion">
+                    <p>2. Edad: </p>                         
+                </td>
+                <td class="celdaDatos">
+                    <form action="">
+                        <div class="form" method="get" >
+                            <label for="edad">Ingresa la Edad del Alumno: </label>
+                            <input type="text" name="Edad" id="edad" placeholder="Aqui va la Edad" required>
+                          </div>
+                    </form>
+                </td>
+            </tr>
+            <tr>
+                <td class="celdaDescripcion">
+                    <p>3. Domicilio: </p>                         
+                </td>
+                <td class="celdaDatos">
+                    <form action="">
+                        <div class="form" method="get" >
+                            <label for="domicilio">Ingresa el Domicilio del Alumno: </label>
+                            <input type="text" name="Domicilio" id="domicilio" placeholder="Aqui va el Domicilio" required>
+                          </div>
+                    </form>
+                </td>
+            </tr>
+            <tr>
+                <td class="celdaDescripcion">
+                    <p>4. Grupo: </p>                         
+                </td>
+                <td class="celdaDatos">
+                    <form action="">
+                        <div class="form" method="get" >
+                            <label for="grupo">Ingresa el Grupo del Alumno: </label>
+                            <input type="text" name="Grado" id="grupo" placeholder="Aqui va el Grupo" required>
+                          </div>
+                    </form>
+                </td>
+            </tr>
+            <tr>
+                <td class="celdaDescripcion">
+                    <p>5. Matricula: </p>                         
+                </td>
+                <td class="celdaDatos">
+                    <form action="">
+                          <div class="form">
+                            <button type="button" name="btnGenerar" id="btnGenerar" onclick="matriculaAlumno()">Generar</button>
+                            <input type="reset" name="btnRestablecer" class="btnRestablecer" value="Restablecer">
+                          </div>
+                    </form>
+                </td>
+            </tr>
+        <tr>
+            <td class="celdaDescripcion">
+              <p>6. Resultado de Matricula de Alumno</p>
+            </td>
+            <td class="celdaDatos">
+              <div id="matriculaAlumno">
+                
+              </div>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+
+    <table id="calificaciones">
+        <thead>
+            <th>
+                Materia
+            </th>
+            <th>
+                Calificación
+            </th>
+        </thead>
+        <tbody>
+            <tr>
+                <td class="celdaDescripcion">
+                    <p>1. Español: </p>                         
+                </td>
+                <td class="celdaDatos">
+                    <form name="frmPromedio" action="">
+                        <div class="form" method="get" >
+                            <label for="español">Ingresa la Calificación de la Materia de Español: </label>
+                            <input type="text" name="Español" id="español" placeholder="Aqui va la Califi. de Esp." required>
+                          </div>
+                    </form>
+                </td>
+            </tr>
+            <tr>
+                <td class="celdaDescripcion">
+                    <p>2. Matematicas: </p>                         
+                </td>
+                <td class="celdaDatos">
+                    <form action="">
+                        <div class="form" method="get" >
+                            <label for="matematicas">Ingresa la Calificación de la Materia de Matematicas: </label>
+                            <input type="text" name="Matematicas" id="matematicas" placeholder="Aqui va la Calif. de Mate." required>
+                          </div>
+                    </form>
+                </td>
+            </tr>
+            <tr>
+                <td class="celdaDescripcion">
+                    <p>3. Ciencias Naturales: </p>                         
+                </td>
+                <td class="celdaDatos">
+                    <form action="">
+                        <div class="form" method="get" >
+                            <label for="ciencias naturales">Ingresa la Calificación de la Materia de Ciencias Naturales: </label>
+                            <input type="text" name="Naturales" id="naturales" placeholder="Aqui va la Califi. de C. Nat." required>
+                          </div>
+                    </form>
+                </td>
+            </tr>
+            <tr>
+                <td class="celdaDescripcion">
+                    <p>4. Deportes: </p>                         
+                </td>
+                <td class="celdaDatos">
+                    <form action="">
+                        <div class="form" method="get" >
+                            <label for="deportes">Ingresa la Calificación de la Materia de Deportes: </label>
+                            <input type="text" name="Deportes" id="deportes" placeholder="Aqui va la Calif. de Dep." required>
+                          </div>
+                    </form>
+                </td>
+            </tr>
+            <tr>
+                <td class="celdaDescripcion">
+                    <p>5. Ingles: </p>                         
+                </td>
+                <td class="celdaDatos">
+                    <form action="">
+                        <div class="form" method="get" >
+                            <label for="ingles">Ingresa la Calificación de la Materia de Ingles:</label>
+                            <input type="text" name="Ingles" id="ingles" placeholder="Aqui va la Calif. de Ing." required>
+                          </div>
+                    </form>
+                </td>
+            </tr>
+            <tr>
+                <td class="celdaDescripcion">
+                    <p>6. Artes Visuales: </p>                         
+                </td>
+                <td class="celdaDatos">
+                    <form action="">
+                        <div class="form" method="get" >
+                            <label for="artes visuales">Ingresa la Calificación de la Materia de Artes Visuales:</label>
+                            <input type="text" name="Arte" id="arte" placeholder="Aqui va la Calif. de A. Vis." required>
+                          </div>
+                    </form>
+                </td>
+            </tr>
+            <tr>
+                <td class="celdaDescripcion">
+                    <p>7. Promedio General: </p>                         
+                </td>
+                <td class="celdaDatos">
+                    <form action="">
+                          <div class="form">
+                            <button type="button" name="btnCalcular" id="btnpromedio" onclick="calcularPromedio()">Calcular</button>
+                            <input type="reset" name="btnRestablecer" class="btnRestablecer" value="Restablecer">
+                          </div>
+                    </form>
+                </td>
+            </tr>
+            <tr>
+                <td class="celdaDescripcion">
+                    <p>8. Resultado: </p>                         
+                </td>
+                <td class="celdaDatos">
+                    <form action="">
+                        <div class="form" method="post" >
+                            <label for="promedio">Resultado de Promedio General:</label>
+                            <input type="text" name="Promedio" id="promedio" placeholder="Promedio General" required>
+                          </div>
+                    </form>
+                </td>
+            </tr>    
+        </tbody>
+    </table>
+    <script src="/JS/main.js" type="text/javascript"></script>
+</body>
+</html>
